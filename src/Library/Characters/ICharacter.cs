@@ -4,6 +4,10 @@ namespace RoleplayGame
 {
     public abstract class ICharacter
     {
+
+        public bool Heroe = True;
+        public int VP = 0;
+
         private int health = 100;
 
         private List<IItem> items = new List<IItem>();
