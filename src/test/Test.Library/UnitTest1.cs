@@ -1,18 +1,27 @@
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using RoleplayGame;
 
-namespace Test.Library
+namespace Program
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void TestNombre()
         {
+            Archer Gastonga = new Archer("Gastonga");
+            string expectedN = "Gastonga";
+            Assert.AreEqual(expectedN,Gastonga.Name);
         }
 
         [Test]
-        public void Test1()
+        public void Test()
         {
-            Assert.Pass();
+            Knight Gustabo = new Knight("Gustabo");
+            int expectedDam = 20;
+            Assert.AreEqual(expectedDam,Gustabo.AttackValue);
         }
     }
 }
