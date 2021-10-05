@@ -5,7 +5,7 @@ namespace RoleplayGame
     public abstract class ICharacter
     {
 
-        public bool Heroe = True;
+        public bool Heroe = true;
         public int VP = 0;
 
         private int health = 100;
@@ -78,6 +78,14 @@ namespace RoleplayGame
             if (this.DefenseValue < power)
             {
                 this.Health -= power - this.DefenseValue;
+            }
+        }
+
+        public void Attack(ICharacter personaje)
+        {
+            if (personaje.DefenseValue < this.AttackValue)
+            {
+                personaje.Health -= this.AttackValue - personaje.DefenseValue;
             }
         }
     }

@@ -4,7 +4,7 @@ namespace RoleplayGame
 {
     public abstract class IMagicCharacter: ICharacter
     {
-        private int health = 100;
+        //private int health = 100;
 
         private List<IItem> items = new List<IItem>();
 
